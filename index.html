@@ -6,13 +6,21 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="page-navigation">
         <a class="page-header-logo">
-          <img class="page-logo" src="img/logo.svg" width="154" height="64" 
-          alt="Логотип магазина Gllasy Shop">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllasy Shop">
         </a>
+      <nav class="page-navigation">
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li class="new"><a href="#">Новинки</a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
@@ -30,7 +38,7 @@
     <main class="container">
       <h1 class="visible-hidden">Магазин мороженого «Gllasy Shop»</h1>
 
-      <article class="store-description">
+      <section class="store-description">
         <h2 class="store-description-title">Магазин Глэйси — это онлайн- и 
           офлайн-магазин по продаже мороженого собственного 
           производства на развес</h2>
@@ -55,16 +63,14 @@
             в пути и позволяет сохранить превосходный вкус.
           </li>
         </ul>
-      </article>
+      </section>
 
-      <article class="blog">
-        <h2 class="blog-title">
-          <a href="#">
-            10 способов сервировки фруктовых щербетов к столу
-          </a>
-        </h2>
-        <p>Новое в нашем блоге</p>
-      </article>
+      <section class="blog">
+        <h2 class="visible-hidden">Статьи из блога</h2>
+        <p>Новое в нашем блоге
+          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        </p>
+      </section>
 
       <section class="subscribe">
         <h2 class="visual-hidden">Подписка</h2>
@@ -77,29 +83,25 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="footer-social">
-        <ul>
-          <li><a class="button social-button" href="#">Twitter</a></li>
-          <li><a class="button social-button" href="#">Instagram</a></li>
-          <li><a class="button social-button" href="#">Facebook</a></li>
-          <li><a class="button social-button" href="#">Вконтакте</a></li>
-        </ul>
-      </div>
+      <ul class="footer-social">
+        <li><a class="button social-button" href="#">Twitter</a></li>
+        <li><a class="button social-button" href="#">Instagram</a></li>
+        <li><a class="button social-button" href="#">Facebook</a></li>
+        <li><a class="button social-button" href="#">Вконтакте</a></li>
+      </ul>
 
-      <div class="about-us">
-        <ul class="about-us-list">
-          <li>Для поставщиков</li>
-          <li>Наши документы</li>
-          <li>О производстве</li>
-          <li>Экологические стандарты</li>
-        </ul>
-      </div>
-      
+      <ul class="about-us">
+        <li>Для поставщиков</li>
+        <li>Наши документы</li>
+        <li>О производстве</li>
+        <li>Экологические стандарты</li>
+      </ul>
+    
       <div class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
           <img src="img/htmlacademy-logo.svg" width="108" height="39" alt="HTML Academy">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2019</p>
       </div>
     </footer>
   </body>
