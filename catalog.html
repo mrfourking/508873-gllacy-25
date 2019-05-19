@@ -59,6 +59,7 @@
                   Сливочное с апельсиновым джемом и цитрусовой стружкой
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -72,6 +73,7 @@
                   Сливочно-кофейное с кусочками шоколада
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -85,6 +87,7 @@
                   Сливочно-клубничное с присыпкой из белого шоколада
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -98,6 +101,7 @@
                 Сливочное крем-брюле с карамельной подливкой
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -111,6 +115,7 @@
                   Сливочное с брусничным джемом
                 </a>
               </h3>
+              <a class ="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -124,6 +129,7 @@
                 Сливочно-черничное с цельными ягодами черники
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -137,6 +143,7 @@
                 Сливочно-лимонное с карамельной присыпкой
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -150,6 +157,7 @@
                 Сливочное с шоколадной стружкой
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -163,6 +171,7 @@
                   Сливочно-ванильное с кусочками шоколада
                 </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -176,6 +185,7 @@
                 Сливочноe с ментоловым сиропом
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -189,6 +199,7 @@
                 Сливочное с кусочками черного шоколада
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <a href="#">
@@ -202,6 +213,7 @@
                 Сливочное с мятным сиропом              
               </a>
             </h3>
+            <a class="button visually-hidden" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -238,5 +250,54 @@
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2019</p>
       </div>
     </footer>
+
+    <section class="modal modal-search">
+      <h2 class="visually-hidden">Поиск</h2>
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
+        <label>
+          Поиск
+          <input class="search-field" type="text">
+        </label>
+      </form>
+    </section>
+
+    <section class="modal modal-login">
+      <h2 class="visually-hidden">Вход в личный кабинет</h2>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="visually-hidden" for="user-login">Электронная почта</label>
+        <input class="login-input" id="user-login" type="email" name="email" placeholder="Электронная почта">
+        <label class="visually-hidden" for="user-password">Пароль</label>
+        <input class="login-input" id="user-password" type="password" name="password" placeholder="Пароль">
+        <button class="button" type="submit">Войти</button>
+        <p>
+          <a href="#">Забыли пароль?</a>
+        </p>
+        <p>
+          <a href="#">Новая регистрация</a>
+        </p>
+      </form>
+    </section>
+
+    <section class="cart">
+      <h2 class="visually-hidden">Корзина</h2>
+      <ul class="cart-list">
+        <li class="cart-item">
+          <button class=" button delete-button" type="button">Удалить</button>
+          <img class="cart-item-image" src="img/product-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+          <h3>Пломбир с апельсиновым джемом</h3>
+          <p>1,5 кг х <span class="price-cart">200 pуб.</span></p>
+          <p>300 руб.</p>
+        </li>
+        <li class="cart-item">
+            <button class=" button delete-button" type="button">Удалить</button>
+            <img class="cart-item-image" src="img/product-3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+            <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+            <p>1,5 кг х <span class="price-cart">300 pуб.</span></p>
+            <p>450 руб.</p>
+          </li>
+      </ul>
+      <p class="cart-sum">Итого: 750 руб.</p>
+      <a class="button" href="#">Оформить заказ</a>
+    </section>
   </body>
 </html>

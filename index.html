@@ -182,7 +182,11 @@
             всего самого вкусного, что у нас происходит. Обещаем не спамить 
             и не слать всякой ненужной ерунды. Честно =) 
         </p>
-        <!--Здесь будет форма-->
+        <form class="subcribe-form" action="https://echo.htmlacademy.ru" method="POST">
+          <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
+          <input class="subcribe-input" id="subscribe-email" type="email" name="email" placeholder="Электронная почта">
+          <button class="button" type="submit">Отправить</button>
+        </form>
       </section>
 
       <section class="map">
@@ -231,5 +235,54 @@
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2019</p>
       </div>
     </footer>
+
+    <section class="modal modal-search">
+      <h2 class="visually-hidden">Поиск</h2>
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
+        <label>
+          Поиск
+          <input class="search-field" type="text">
+        </label>
+      </form>
+    </section>
+
+    <section class="modal modal-login">
+      <h2 class="visually-hidden">Вход в личный кабинет</h2>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="visually-hidden" for="user-login">Электронная почта</label>
+        <input class="login-input" id="user-login" type="email" name="email" placeholder="Электронная почта">
+        <label class="visually-hidden" for="user-password">Пароль</label>
+        <input class="login-input" id="user-password" type="password" name="password" placeholder="Пароль">
+        <button class="button" type="submit">Войти</button>
+        <p>
+          <a href="#">Забыли пароль?</a>
+        </p>
+        <p>
+          <a href="#">Новая регистрация</a>
+        </p>
+      </form>
+    </section>
+
+    <section class="modal modal-feedback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <b>Мы вам обязательно ответим!</b>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
+        <label class="visually-hidden" for="user-name">Ваше имя</label>
+        <input class="feedback-input" id="user-name" type="text" name="name" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="user-email">Электронная почта</label>
+        <input class="feedback-input" id="user-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+        <textarea class="feedback-textarea" name="message" placeholder="Напишите что-нибудь..."></textarea>
+        <button class="button" type="submit">Отправить</button>
+        <button class="button" type="button">Закрыть</button>
+      </form>
+    </section>
+
+    <section class="cart">
+      <h2 class="visually-hidden">Корзина</h2>
+      <ul class="cart-list">
+      </ul>
+      <p class="cart-sum">Итого: 0 руб.</p>
+      <a class="button">Оформить заказ</a>
+    </section>
   </body>
 </html>
