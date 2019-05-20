@@ -26,9 +26,48 @@
         </ul>
       </nav>
       <ul class="user-navigation">
-        <li class="user-navigation-search"><a class="button" href="#">Поиск</a></li>
-        <li class="user-navigation-login"><a class="button" href="#">Вход</a></li>
-        <li class="user-navigation-cart"><a class="button" href="#">Пусто</a></li>
+        <li class="user-navigation-search"> 
+          <a class="button" href="#">Поиск</a>
+          
+          <section class="modal modal-search">
+            <h2 class="visually-hidden">Поиск</h2>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
+              <label>
+                Поиск
+                <input class="search-field" type="text" placeholder="Что ищем?">
+              </label>
+            </form>
+          </section>
+        </li>
+        <li class="user-navigation-login">
+          <a class="button" href="#">Вход</a>
+          <section class="modal modal-login">
+            <h2 class="visually-hidden">Вход в личный кабинет</h2>
+            <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
+              <label class="visually-hidden" for="user-login">Электронная почта</label>
+              <input class="login-input" id="user-login" type="email" name="email" placeholder="Электронная почта">
+              <label class="visually-hidden" for="user-password">Пароль</label>
+              <input class="login-input" id="user-password" type="password" name="password" placeholder="Пароль">
+              <button class="button" type="submit">Войти</button>
+              <p>
+                <a href="#">Забыли пароль?</a>
+              </p>
+              <p>
+                <a href="#">Новая регистрация</a>
+              </p>
+            </form>
+          </section>
+        </li>
+        <li class="user-navigation-cart">
+          <a class="button" href="#">Пусто</a>
+          <section class="cart">
+            <h2 class="visually-hidden">Корзина</h2>
+            <table class="cart-list">
+            </table>
+            <p class="cart-sum">Итого: 0 руб.</p>
+            <a class="button">Оформить заказ</a>
+          </section>
+        </li>
       </ul>
       <p class="header-contacts">
         С 10 до 20, ежедневно
@@ -236,33 +275,6 @@
       </div>
     </footer>
 
-    <section class="modal modal-search">
-      <h2 class="visually-hidden">Поиск</h2>
-      <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
-        <label>
-          Поиск
-          <input class="search-field" type="text">
-        </label>
-      </form>
-    </section>
-
-    <section class="modal modal-login">
-      <h2 class="visually-hidden">Вход в личный кабинет</h2>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="POST">
-        <label class="visually-hidden" for="user-login">Электронная почта</label>
-        <input class="login-input" id="user-login" type="email" name="email" placeholder="Электронная почта">
-        <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="login-input" id="user-password" type="password" name="password" placeholder="Пароль">
-        <button class="button" type="submit">Войти</button>
-        <p>
-          <a href="#">Забыли пароль?</a>
-        </p>
-        <p>
-          <a href="#">Новая регистрация</a>
-        </p>
-      </form>
-    </section>
-
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <b>Мы вам обязательно ответим!</b>
@@ -273,16 +285,8 @@
         <input class="feedback-input" id="user-email" type="email" name="email" placeholder="Ваша почта для ответа?">
         <textarea class="feedback-textarea" name="message" placeholder="Напишите что-нибудь..."></textarea>
         <button class="button" type="submit">Отправить</button>
-        <button class="button" type="button">Закрыть</button>
+        <button class="button" type="reset">Закрыть</button>
       </form>
-    </section>
-
-    <section class="cart">
-      <h2 class="visually-hidden">Корзина</h2>
-      <ul class="cart-list">
-      </ul>
-      <p class="cart-sum">Итого: 0 руб.</p>
-      <a class="button">Оформить заказ</a>
     </section>
   </body>
 </html>
