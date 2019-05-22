@@ -28,7 +28,7 @@
       <ul class="user-navigation">
         <li class="user-navigation-search">
           <a class="button" href="#">Поиск</a>
-          
+
           <section class="modal modal-search">
             <h2 class="visually-hidden">Поиск</h2>
             <form class="search-form" action="https://echo.htmlacademy.ru" method="POST">
@@ -111,13 +111,50 @@
       </p>
     </header>
     <main class="container">
-      <h1 class="page-title">Сливочное мороженое</h1>
 
       <ul class="breadcrumbs">
         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumb-item"><a href="catalog.html">Каталог</a></li>
         <li class="breadcrumb-item breadcrumb-item-current">Сливочное</li>
       </ul>
+
+      <h1 class="page-title">Сливочное мороженое</h1>
+
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <form class="filter-form">
+          <fieldset class="sort-field">
+            <legend>Сортировка:</legend>
+            <select>
+              <option>По популярности</option>
+            </select>
+          </fieldset>
+          <fieldset class="price-field">
+            <legend>Цена:</legend>
+            <label class="visually-hidden" for="min-price">Минимальная цена</label>
+            <input class="minimal-price" id="min-price" type="text">
+            <label class="visually-hidden" for="max-price">Максимальная цена</label>
+            <input class="maximal-price" id="max-price" type="text">
+            <div class="price-range"></div>
+          </fieldset>
+          <fieldset class="fat-content-field">
+            <legend>Жирность:</legend>
+            <label><input class="fat-content-radio" type="radio" name="fat-content-choose">0%</label>
+            <label><input class="fat-content-radio" type="radio" name="fat-content-choose" checked>до 10%</label>
+            <label><input class="fat-content-radio" type="radio" name="fat-content-choose">до 30%</label>
+            <label><input class="fat-content-radio" type="radio" name="fat-content-choose">выше 30%</label>
+          </fieldset>
+          <fieldset class="additive">
+            <legend>Наполнители:</legend>
+            <label><input class="additive-checkbox" type="checkbox" name="chocolate" checked>шоколадные</label>
+            <label><input class="additive-checkbox" type="checkbox" name="sugar" checked>сахарные присыпки</label>
+            <label><input class="additive-checkbox" type="checkbox" name="fruit">фрукты</label>
+            <label><input class="additive-checkbox" type="checkbox" name="syrup">сиропы</label>
+            <label><input class="additive-checkbox" type="checkbox" name="jam">джемы</label>
+          </fieldset>
+          <button class="btn" type="submit">Применить</button>
+        </form>
+      </section>
 
       <section class="catalog">
         <h2 class="visually-hidden">Список мороженого</h2>
@@ -285,7 +322,7 @@
             </p>
             <h3>
               <a href="#">
-                Сливочное с мятным сиропом              
+                Сливочное с мятным сиропом
               </a>
             </h3>
             <a class="button visually-hidden" href="#">Быстрый просмотр</a>
@@ -317,7 +354,7 @@
           <li>О производстве</li>
           <li>Экологические стандарты</li>
         </ul>
-      
+
       <div class="footer-copyright">
         <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
