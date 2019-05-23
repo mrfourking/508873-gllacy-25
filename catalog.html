@@ -6,12 +6,12 @@
   </head>
   <body>
     <header class="page-header">
-        <a class="page-header-logo" href="index.html">
+        <a class="page-header-logo" href="index.html" aria-label="Логотип магазина Gllasy Shop">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllasy Shop">
         </a>
       <nav class="page-navigation">
         <ul class="site-navigation">
-          <li>
+          <li class="site-navigation-item">
             <a href="catalog.html">Каталог</a>
             <ul class="submenu">
               <li class="new"><a href="#">Новинки</a></li>
@@ -21,8 +21,8 @@
               <li><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О компании</a></li>
+          <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
+          <li class="site-navigation-item"><a href="#">О компании</a></li>
         </ul>
       </nav>
       <ul class="user-navigation">
@@ -122,11 +122,14 @@
 
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter-form">
+        <form class="filter-form" action="https://echo.htmlacademy.ru" method="POST">
           <fieldset class="sort-field">
             <legend>Сортировка:</legend>
             <select>
-              <option>По популярности</option>
+              <option>по популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала порогие</option>
+              <option>по жирности</option>
             </select>
           </fieldset>
           <fieldset class="price-field">
@@ -139,18 +142,18 @@
           </fieldset>
           <fieldset class="fat-content-field">
             <legend>Жирность:</legend>
-            <label><input class="fat-content-radio" type="radio" name="fat-content-choose">0%</label>
-            <label><input class="fat-content-radio" type="radio" name="fat-content-choose" checked>до 10%</label>
-            <label><input class="fat-content-radio" type="radio" name="fat-content-choose">до 30%</label>
-            <label><input class="fat-content-radio" type="radio" name="fat-content-choose">выше 30%</label>
+            <input class="fat-content-radio" id="fat-content-1" type="radio" name="fat-content-choose"><label for="fat-content-1">0%</label>
+            <input class="fat-content-radio" id="fat-content-2" type="radio" name="fat-content-choose" checked><label for="fat-content-2">до 10%</label>
+            <input class="fat-content-radio" id="fat-content-3" type="radio" name="fat-content-choose"><label for="fat-content-3">до 30%</label>
+            <input class="fat-content-radio" id="fat-content-4" type="radio" name="fat-content-choose"><label for="fat-content-4">выше 30%</label>
           </fieldset>
           <fieldset class="additive">
             <legend>Наполнители:</legend>
-            <label><input class="additive-checkbox" type="checkbox" name="chocolate" checked>шоколадные</label>
-            <label><input class="additive-checkbox" type="checkbox" name="sugar" checked>сахарные присыпки</label>
-            <label><input class="additive-checkbox" type="checkbox" name="fruit">фрукты</label>
-            <label><input class="additive-checkbox" type="checkbox" name="syrup">сиропы</label>
-            <label><input class="additive-checkbox" type="checkbox" name="jam">джемы</label>
+            <input class="additive-checkbox" id="additive-checkbox-1" type="checkbox" name="chocolate" checked><label for="additive-checkbox-1">шоколадные</label>
+            <input class="additive-checkbox" id="additive-checkbox-2" type="checkbox" name="sugar" checked><label for="additive-checkbox-2">сахарные присыпки</label>
+            <input class="additive-checkbox" id="additive-checkbox-3" type="checkbox" name="fruit"><label for="additive-checkbox-3">фрукты</label>
+            <input class="additive-checkbox" id="additive-checkbox-4" type="checkbox" name="syrup"><label for="additive-checkbox-4">сиропы</label>
+            <input class="additive-checkbox" id="additive-checkbox-5" type="checkbox" name="jam"><label for="additive-checkbox-5">джемы</label>
           </fieldset>
           <button class="btn" type="submit">Применить</button>
         </form>
@@ -356,7 +359,7 @@
         </ul>
 
       <div class="footer-copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="Логотип компании HTML Academy">
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
         </a>
         <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a> © 2019</p>
