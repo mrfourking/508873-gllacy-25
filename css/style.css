@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 
@@ -10,8 +20,18 @@ body {
   background-color: #849d8f;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: #ffffff;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #ffbc9e;
 }
 
 .visually-hidden {
@@ -28,6 +48,7 @@ a {
   font-weight: 700;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   text-decoration: none;
+  color: #ffffff;
 
   background-image: linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
@@ -35,6 +56,8 @@ a {
 
 .button:hover,
 .button:focus {
+  color: #ffffff;
+
   background-image:
     linear-gradient(to top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
     linear-gradient(to top, rgb(231, 74, 53) 0%, rgb(242, 104, 67) 100%);
@@ -43,6 +66,8 @@ a {
 }
 
 .button:active {
+  color: #ffffff;
+
   background-image: linear-gradient(to bottom, rgb(242, 104, 67) 0%, rgb(231, 74, 53) 100%);
   box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.64);
 }
@@ -83,7 +108,6 @@ a {
 }
 
 .user-navigation {
-  text-align: right;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
@@ -110,7 +134,6 @@ a {
 }
 
 .header-contacts {
-  text-align: right;
   font-size: 14px;
   line-height: 16px;
 }
@@ -125,7 +148,6 @@ a {
 }
 
 .slide p {
-  text-align: center;
   font-size: 60px;
   line-height: 61px;
 }
@@ -147,18 +169,20 @@ a {
   color: #ffffff;
 }
 
+.raspberry-promo,
+.chocolate-promo {
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
 .raspberry-promo {
   background-color: #b3153f;
   background-image: url("../img/banner-background-1.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 .chocolate-promo {
   background-color: #774e41;
   background-image: url("../img/banner-background-2.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
 }
 
 .catalog-list {
@@ -226,6 +250,12 @@ a {
   background-color: #e6ebe9;
 }
 
+.blog a:hover,
+.blog a:focus,
+.blog a:active {
+  color: #e84d37;
+}
+
 .subscribe {
   font-size: 16px;
   line-height: 22px;
@@ -287,6 +317,41 @@ a {
 .page-title {
   font-size: 35px;
   line-height: 41px;
+}
+
+.filter {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.filter-form fieldset {
+  border: none;
+}
+
+.filter-form label,
+.filter-form select,
+.filter-button {
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.filter-form select,
+.fat-content-field,
+.additive,
+.filter-button {
+  background-color: #abbcb2;
+}
+
+.filter-form select:hover,
+.filter-form select:focus {
+  color: #323232;
+  background-color: #abbcb2;
+}
+
+.filter-button {
+  border: 2px solid #ffffff;
 }
 
 .pagination-list {
