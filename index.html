@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header container">
     <a class="page-header-logo">
       <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Gllasy Shop">
     </a>
@@ -33,7 +33,7 @@
     </nav>
 
     <ul class="user-navigation">
-      <li class="user-navigation-search">
+      <li class="user-navigation-item user-navigation-search">
         <a class="user-navigation-button" href="#">Поиск</a>
 
         <section class="modal modal-search">
@@ -46,7 +46,7 @@
 
       </li>
       <li class="user-navigation-login">
-        <a class="user-navigation-button" href="#">Вход</a>
+        <a class="user-navigation-item user-navigation-button" href="#">Вход</a>
 
         <section class="modal modal-login">
           <h2 class="visually-hidden">Вход в личный кабинет</h2>
@@ -66,7 +66,7 @@
         </section>
 
       </li>
-      <li class="user-navigation-cart">
+      <li class="user-navigation-item user-navigation-cart">
         <a class="user-navigation-button" href="#">Пусто</a>
 
         <section class="cart">
@@ -80,11 +80,12 @@
       </li>
     </ul>
     <p class="header-contacts">
-      С 10 до 20, ежедневно
+      С 10 до 20, ежедневно<br>
       <span class="phone-number">8 812 450-25-25</span>
     </p>
   </header>
-  <main class="container">
+  <main>
+    <div class="container">
     <h1 class="visually-hidden">Магазин мороженого «Gllasy Shop»</h1>
 
     <section class="slider-container">
@@ -92,17 +93,17 @@
 
       <ul class="slider">
         <li class="slide">
-          <img src="img/slide-1.jpg" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+          <img src="img/slide-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
           <p>Крем-брюле и пломбир с малиновым джемом</p>
           <a class="button" href="#">Давайте оба!</a>
         </li>
         <li class="slide">
-          <img src="img/slide-2.jpg" width="1045" height="881" alt="Шоколадный пломбир и лимонный сорбет">
+          <img src="img/slide-2.png" width="1045" height="881" alt="Шоколадный пломбир и лимонный сорбет">
           <p>Шоколадный пломбир и лимонный сорбет</p>
           <a class="button" href="#">Давайте оба!</a>
         </li>
         <li class="slide">
-          <img src="img/slide-3.jpg" width="1045" height="881" alt="Пломбир с помадкой и клубничный щербет">
+          <img src="img/slide-3.png" width="1045" height="881" alt="Пломбир с помадкой и клубничный щербет">
           <p>Пломбир с помадкой и клубничный щербет</p>
           <a class="button" href="#">Давайте оба!</a>
         </li>
@@ -205,21 +206,21 @@
         офлайн-магазин по продаже мороженого собственного
         производства на развес</h2>
       <ul class="store-description-list">
-        <li>
+        <li class="store-description-item">
           Все наше мороженое изготавливается на собственном
           производстве, с использованием современного оборудования
           и проверенных временем технологий.
         </li>
-        <li>
+        <li class="store-description-item">
+          Закупка ингредиентов производится только у проверенных
+          фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+        </li>
+        <li class="store-description-item">
           Для приготовления мороженого используются настоящие
           сливки и молоко высочайшего качества. Все дополнительные
           ингредиенты и добавки произведены из натурального, экологически чистого сырья.
         </li>
-        <li>
-          Закупка ингредиентов производится только у проверенных
-          фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-        </li>
-        <li>
+        <li class="store-description-item">
           Доставка нашего мороженого до заказчиков осуществляется
           в специальном термопаке, который не дает мороженому растаять
           в пути и позволяет сохранить превосходный вкус.
@@ -227,26 +228,28 @@
       </ul>
     </section>
 
-    <section class="blog">
-      <h2 class="visually-hidden">Статьи из блога</h2>
-      <p>Новое в нашем блоге
+    <div class="column-wrap">
+      <section class="blog">
+        <h2 class="visually-hidden">Статьи из блога</h2>
+        <p>Новое в нашем блоге</p>
         <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-      </p>
-    </section>
+      </section>
 
-    <section class="subscribe">
-      <h2 class="visually-hidden">Подписка</h2>
-      <p>
-        Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-        всего самого вкусного, что у нас происходит. Обещаем не спамить
-        и не слать всякой ненужной ерунды. Честно =)
-      </p>
-      <form class="subcribe-form" action="https://echo.htmlacademy.ru" method="POST">
-        <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
-        <input class="subcribe-input" id="subscribe-email" type="email" name="email" placeholder="Электронная почта">
-        <button class="button" type="submit">Отправить</button>
-      </form>
-    </section>
+      <section class="subscribe">
+        <h2 class="visually-hidden">Подписка</h2>
+        <p>
+          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
+          всего самого вкусного, что у нас происходит. Обещаем не спамить
+          и не слать всякой ненужной ерунды. Честно =)
+        </p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="POST">
+          <label class="visually-hidden" for="subscribe-email">Электронная почта</label>
+          <input class="subscribe-input" id="subscribe-email" type="email" name="email" placeholder="Электронная почта">
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </section>
+    </div>
+    </div>
 
     <section class="map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
@@ -271,9 +274,8 @@
         <a class="button" href="#">Форма обратной связи</a>
       </div>
     </section>
-
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <ul class="footer-social">
       <li><a class="social-button" href="#">Twitter</a></li>
       <li><a class="social-button" href="#">Instagram</a></li>
