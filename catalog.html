@@ -116,10 +116,12 @@
 
       </li>
     </ul>
-    <p class="header-contacts">
-      С 10 до 20, ежедневно<br>
-      <span class="phone-number">8 812 450-25-25</span>
-    </p>
+    <div class="header-contacts-wrap">
+      <p class="header-contacts">
+        С 10 до 20, ежедневно
+        <span class="phone-number">8 812 450-25-25</span>
+      </p>
+    </div>
   </header>
   <main class="container">
 
@@ -139,41 +141,47 @@
           <select>
             <option>по популярности</option>
             <option>сначала недорогие</option>
-            <option>сначала порогие</option>
+            <option>сначала дорогие</option>
             <option>по жирности</option>
           </select>
         </fieldset>
-        <fieldset class="price-field">
+        <div class="price-field">
           <legend>Цена:</legend>
           <label class="visually-hidden" for="min-price">Минимальная цена</label>
-          <input class="minimal-price" id="min-price" type="text">
+          <input class="minimal-price" id="min-price" type="text" value="100">
+          <span>руб. - </span>
           <label class="visually-hidden" for="max-price">Максимальная цена</label>
-          <input class="maximal-price" id="max-price" type="text">
+          <input class="maximal-price" id="max-price" type="text" value="500">
+          <span>руб.</span>
           <div class="price-range"></div>
-        </fieldset>
+        </div>
         <fieldset class="fat-content-field">
           <legend>Жирность:</legend>
-          <input class="fat-content-radio" id="fat-content-1" type="radio" name="fat-content-choose"><label
-            for="fat-content-1">0%</label>
-          <input class="fat-content-radio" id="fat-content-2" type="radio" name="fat-content-choose" checked><label
-            for="fat-content-2">до 10%</label>
-          <input class="fat-content-radio" id="fat-content-3" type="radio" name="fat-content-choose"><label
-            for="fat-content-3">до 30%</label>
-          <input class="fat-content-radio" id="fat-content-4" type="radio" name="fat-content-choose"><label
-            for="fat-content-4">выше 30%</label>
+          <div class="fieldset-wrap">
+            <input class="fat-content-radio" id="fat-content-1" type="radio" name="fat-content-choose" value="0%"><label
+              for="fat-content-1">0%</label>
+            <input class="fat-content-radio" id="fat-content-2" type="radio" name="fat-content-choose" value="до 10%" checked><label
+              for="fat-content-2">до 10%</label>
+            <input class="fat-content-radio" id="fat-content-3" type="radio" name="fat-content-choose" value="до 30%"><label
+              for="fat-content-3">до 30%</label>
+            <input class="fat-content-radio" id="fat-content-4" type="radio" name="fat-content-choose" value="выше 30%"><label
+              for="fat-content-4">выше 30%</label>
+          </div>
         </fieldset>
         <fieldset class="additive">
           <legend>Наполнители:</legend>
-          <input class="additive-checkbox" id="additive-checkbox-1" type="checkbox" name="chocolate" checked><label
-            for="additive-checkbox-1">шоколадные</label>
-          <input class="additive-checkbox" id="additive-checkbox-2" type="checkbox" name="sugar" checked><label
-            for="additive-checkbox-2">сахарные присыпки</label>
-          <input class="additive-checkbox" id="additive-checkbox-3" type="checkbox" name="fruit"><label
-            for="additive-checkbox-3">фрукты</label>
-          <input class="additive-checkbox" id="additive-checkbox-4" type="checkbox" name="syrup"><label
-            for="additive-checkbox-4">сиропы</label>
-          <input class="additive-checkbox" id="additive-checkbox-5" type="checkbox" name="jam"><label
-            for="additive-checkbox-5">джемы</label>
+          <div class="fieldset-wrap">
+            <input class="additive-checkbox" id="additive-checkbox-1" type="checkbox" name="chocolate" checked><label
+              for="additive-checkbox-1">шоколадные</label>
+            <input class="additive-checkbox" id="additive-checkbox-2" type="checkbox" name="sugar" checked><label
+              for="additive-checkbox-2">сахарные присыпки</label>
+            <input class="additive-checkbox" id="additive-checkbox-3" type="checkbox" name="fruit"><label
+              for="additive-checkbox-3">фрукты</label>
+            <input class="additive-checkbox" id="additive-checkbox-4" type="checkbox" name="syrup"><label
+              for="additive-checkbox-4">сиропы</label>
+            <input class="additive-checkbox" id="additive-checkbox-5" type="checkbox" name="jam"><label
+              for="additive-checkbox-5">джемы</label>
+          </div>
         </fieldset>
         <button class="filter-button" type="submit">Применить</button>
       </form>

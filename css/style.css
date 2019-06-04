@@ -83,7 +83,6 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 530px;
   padding-top: 10px;
 }
 
@@ -98,7 +97,6 @@ a:active {
 }
 
 .page-navigation {
-  width: 644px;
   margin-right: 26px;
 
   font-size: 16px;
@@ -150,6 +148,7 @@ a:active {
   justify-content: flex-end;
   width: 297px;
   margin: 0;
+  margin-left: auto;
   padding: 0;
 
   font-size: 14px;
@@ -185,6 +184,10 @@ a:active {
   display: none;
 }
 
+.header-contacts-wrap {
+  width: 100%;
+}
+
 .header-contacts {
   width: 167px;
   margin: 0;
@@ -197,22 +200,67 @@ a:active {
 }
 
 .phone-number {
+  display: block;
+  width: 100%;
   font-size: 22px;
   line-height: 24px;
 }
 
 .slider {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 285px;
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -523px;
+  z-index: -1;
+}
+
 .slide p {
+  z-index: 1;
+  width: 670px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+
+  text-align: center;
   font-size: 60px;
   line-height: 61px;
+
 }
 
 .slide .button {
   font-size: 32px;
   line-height: 44px;
+}
+
+.slider-switch {
+  margin-top: -43px;
+  margin-bottom: 63px;
+}
+
+.first-slide {
+  display: flex;
+}
+
+.second-slide{
+  display: none;
+}
+
+.third-slide {
+  display: none;
 }
 
 .promo {
@@ -229,18 +277,58 @@ a:active {
 
 .raspberry-promo,
 .chocolate-promo {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+
   background-position: top center;
   background-repeat: no-repeat;
+
+  border-radius: 11px;
 }
 
 .raspberry-promo {
   background-color: #b3153f;
   background-image: url("../img/banner-background-1.jpg");
+  background-size: cover;
 }
 
 .chocolate-promo {
   background-color: #774e41;
   background-image: url("../img/banner-background-2.jpg");
+  background-size: cover;
+}
+
+.raspberry-promo h3,
+.raspberry-promo p,
+.chocolate-promo h3,
+.chocolate-promo p {
+  margin: 0;
+  padding: 0;
+}
+
+.raspberry-promo h3,
+.chocolate-promo h3,
+.raspberry-promo .button,
+.chocolate-promo .button {
+  margin-bottom: 25px;
+}
+
+.raspberry-promo p,
+.chocolate-promo p {
+  margin-bottom: 50px;
+}
+
+.raspberry-promo .button,
+.chocolate-promo .button {
+  align-self: flex-end;
+}
+
+.hits .catalog-list {
+  margin: 0;
 }
 
 .catalog-list {
@@ -377,7 +465,7 @@ a:active {
 }
 
 .blog a {
-  width: 280px;
+  width: 281px;
   margin-bottom: 85px;
   font-size: 24px;
   line-height: 30px;
@@ -426,16 +514,21 @@ a:active {
 }
 
 .map {
-  width: 98.7vw;
+  position: relative;
+  width: 100%;
 }
 
 .map img {
-  width: 98.7vw;
+  width: 100%;
   height: auto;
 }
 
 .contacts {
-  width: 300px;
+  position: absolute;
+  top: 65px;
+  right: 27px;
+
+  width: 302px;
   display: flex;
   flex-direction: column;
   padding-top: 35px;
@@ -460,6 +553,9 @@ a:active {
 
 .contacts .address,
 .contacts .phone-number {
+  display: block;
+  width: 100%;
+
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
@@ -469,6 +565,7 @@ a:active {
 }
 
 .contacts .button {
+  align-self: center;
   margin-bottom: 30px;
 }
 
@@ -577,8 +674,24 @@ a:active {
   font-weight: 500;
 }
 
-.filter-form fieldset {
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter-form fieldset,
+.price-field {
+  margin: 0;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  padding: 0;
+
   border: none;
+}
+
+.filter-form legend {
+  margin-left: 15px;
+  margin-bottom: 10px;
 }
 
 .filter-form label,
@@ -590,10 +703,13 @@ a:active {
 }
 
 .filter-form select,
-.fat-content-field,
-.additive,
-.filter-button {
+.fieldset-wrap,
+.price-range {
+  min-height: 38px;
+
   background-color: #abbcb2;
+
+  border-radius: 18px;
 }
 
 .filter-form select:hover,
@@ -603,7 +719,45 @@ a:active {
   background-color: #9aa39e;
 }
 
+.price-field {
+  display: flex;
+  width: 220px;
+  flex-wrap: wrap;
+}
+
+.price-field span {
+  line-height: 16px;
+}
+
+.price-field input {
+  width: 30px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+}
+
+.price-range {
+  width: 100%;
+  height: 36px;
+}
+
+.fieldset-wrap {
+  padding: 8px 20px;
+}
+
 .filter-button {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+
+  background-color: #abbcb2;
+
   border: 2px solid #ffffff;
 }
 
