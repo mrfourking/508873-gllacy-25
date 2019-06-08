@@ -44,8 +44,8 @@ a:active {
 }
 
 .button {
-  padding: 15px 22px;
-  font-size: 16px;
+  padding: 10px 25px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
@@ -385,9 +385,6 @@ a:active {
 .cart .button {
   align-self: flex-end;
   padding: 10px 15px;
-
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .delete-button {
@@ -636,6 +633,7 @@ a:active {
 }
 
 .catalog-item {
+  position: relative;
   width: 267px;
   margin: 0;
   margin-right: 26px;
@@ -678,9 +676,38 @@ a:active {
   font-size: 30px;
 }
 
+.catalog-item-overlay {
+  display: none;
+  position: absolute;
+  top: -6px;
+  left: -13px;
+  z-index: 1;
+
+  width: 293px;
+  min-height: 420px;
+
+  background-color: rgba(248, 247, 244, 0.2);
+
+  border-radius: 5px;
+}
+
 .catalog-button {
   display: none;
+  position: absolute;
+  top: 355px;
+  left: 45px;
+  z-index: 1;
+
+  padding: 10px 15px;
 }
+
+.catalog-item:hover .catalog-item-overlay,
+.catalog-item:focus .catalog-item-overlay,
+.catalog-item:hover .catalog-button,
+.catalog-item:focus .catalog-button {
+  display: block;
+}
+
 
 .store-description {
   display: flex;
@@ -849,9 +876,6 @@ a:active {
 
 .subscribe-form .button {
   padding: 9px 19px;
-
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .subscribe-input {
@@ -922,9 +946,6 @@ a:active {
   align-self: center;
   margin-bottom: 30px;
   padding: 10px 27px;
-
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .modal-feedback {
@@ -961,10 +982,6 @@ a:active {
 
 .submit-button {
   align-self: flex-end;
-  padding: 10px 25px;
-
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .close-button {
