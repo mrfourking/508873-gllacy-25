@@ -561,6 +561,16 @@ a:active {
   background-color: transparent;
   border: 2px solid #ffffff;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-switch label:hover,
+.slider-switch label:focus {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
+.slider-switch label:active {
+  background-color: #ffffff;
 }
 
 .slider-btn:checked + label {
@@ -1246,18 +1256,56 @@ a:active {
 .filter-form select,
 .fieldset-wrap,
 .price-range {
-  min-height: 38px;
+  padding: 7px 15px;
 
   background-color: #abbcb2;
 
   border-radius: 18px;
 }
 
+.sort-field select {
+  padding-top: 9px;
+  padding-right: 40px;
+  padding-bottom: 9px;
+  padding-left: 15px;
+
+  -webkit-appearance: none;
+  border: none;
+}
+
+.sort-field select::-ms-expand {
+  display: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::before {
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 20px;
+
+  width: 11px;
+  height: 10px;
+
+  background-image: url("../img/select-arrow-white.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.select-wrapper:hover::before,
+.select-wrapper:focus::before {
+  background-image: url("../img/select-arrow-grey.svg");
+}
+
 .filter-form select:hover,
 .filter-form select:focus {
   color: #323232;
 
-  background-color: #9aa39e;
+  background-color: #aabab0;
 }
 
 .price-field {
@@ -1274,6 +1322,7 @@ a:active {
   width: 30px;
   height: 16px;
   margin: 0;
+  margin-left: 5px;
   padding: 0;
 
   font: inherit;
@@ -1285,21 +1334,137 @@ a:active {
 
 .price-range {
   width: 100%;
-  height: 36px;
+  padding: 16px 20px;
+}
+
+.scale {
+  position: relative;
+  width: 176px;
+  height: 4px;
+  padding-left: 34px;
+
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.scale::before,
+.scale::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 13px;
+
+  width: 20px;
+  height: 23px;
+
+  background-image: url("../img/filter-button.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+}
+
+.scale::after {
+  left: 111px;
+}
+
+.checked-range {
+  width: 78px;
+  height: 4px;
+
+  background-color: #f8f7f4;
 }
 
 .fieldset-wrap {
-  padding: 8px 20px;
+  padding: 9px 20px;
 }
+
+.fat-content-field label,
+.additive label {
+  position: relative;
+  padding-left: 35px;
+  padding-right: 18px;
+}
+
+.fat-content-field label:last-child,
+.additive label:last-child {
+  padding-right: 0;
+}
+
+.fat-content-field label::before,
+.additive label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+  width: 25px;
+  height:25px;
+
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+}
+
+.fat-content-field label::before {
+  background-image: url("../img/radio-off.svg");
+}
+
+.additive label::before {
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.fat-content-field label:hover::before,
+.fat-content-field label:focus::before,
+.additive label:hover::before,
+.additive label:focus::before {
+  opacity: 1;
+}
+
+.fat-content-field label:active::before,
+.additive label:active::before {
+  opacity: 0.4;
+}
+
+.fat-content-radio:checked + label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.additive-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
 
 .filter-button {
   margin: 0;
-  padding: 0;
+  margin-left: 15px;
+  padding: 7px 27px;
   align-self: center;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
 
   background-color: #abbcb2;
 
   border: 2px solid #ffffff;
+  border-radius: 20px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  color: #323232;
+
+  background-color: #fbfcfb;
+}
+
+.filter-button:active {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  color: #323232;
+
+  background-color: rgb(237, 237, 237);
+  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
+  border: none;
 }
 
 .pagination-list {
@@ -1327,6 +1492,19 @@ a:active {
 
 .pagination-item:last-child {
   margin-right: 0;
+}
+
+.pagination-item:hover,
+.pagination-item:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item:active {
+  background-color: #ffffff;
+}
+
+.pagination-item:active a {
+  color: #323232;
 }
 
 .pagination-item a {
@@ -1416,4 +1594,13 @@ a:active {
   right:0;
 
   transform: rotate( 45deg);
+}
+
+.pagination-item-back:hover,
+.pagination-item-back:focus,
+.pagination-item-forward:hover,
+.pagination-item-forward:focus,
+.pagination-item-back:active,
+.pagination-item-forward:active {
+  background-color: transparent;
 }
