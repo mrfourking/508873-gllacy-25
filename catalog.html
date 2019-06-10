@@ -71,16 +71,22 @@
             <input class="login-input" id="user-login" type="email" name="email" placeholder="Электронная почта">
             <label class="visually-hidden" for="user-password">Пароль</label>
             <input class="login-input" id="user-password" type="password" name="password" placeholder="Пароль">
-            <button class="button" type="submit">Войти</button>
-            <p>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
-            </p>
+            <div class="modal-login-wrap">
+              <button class="button" type="submit">Войти</button>
+              <div class="login-help">
+                <p>
+                  <a href="#">Забыли пароль?</a>
+                </p>
+                <p>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </div>
+            </div>
           </form>
         </section>
 
       </li>
-      <li class="user-navigation-item">
+      <li class="user-navigation-item cart-item">
         <a class="user-navigation-button user-navigation-cart-full" href="#">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
             <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
@@ -398,13 +404,19 @@
     </section>
 
     <ul class="pagination-list">
-      <li class="pagination-item pagination-item-back"><a>Назад</a></li>
+      <li class="pagination-item pagination-item-back">
+        <a><span class="visually-hidden">Назад</span></a>
+      </li>
       <li class="pagination-item pagination-item-current"><a>1</a></li>
       <li class="pagination-item"><a href="#">2</a></li>
       <li class="pagination-item"><a href="#">3</a></li>
       <li class="pagination-item"><a href="#">4</a></li>
       <li class="pagination-item"><a href="#">5</a></li>
-      <li class="pagination-item pagination-item-forward"><a href="#">Вперед</a></li>
+      <li class="pagination-item pagination-item-forward">
+        <a href="#">
+          <span class="visually-hidden">Вперед</span>
+        </a>
+      </li>
     </ul>
   </main>
   <footer class="page-footer container">

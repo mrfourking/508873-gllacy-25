@@ -181,8 +181,6 @@ a:active {
 
 .submenu-item {
   padding: 12px;
-
-  border-radius: 5px;
 }
 
 .submenu-item:hover {
@@ -191,6 +189,16 @@ a:active {
 
 .submenu-item:active {
   background-color: #f6b5a5;
+}
+
+.submenu-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.submenu-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .submenu-item-current {
@@ -446,9 +454,9 @@ a:active {
 .feedback-textarea {
   width: 100%;
   margin-bottom: 20px;
-  padding-top: 12px;
+  padding-top: 9px;
   padding-right: 14px;
-  padding-bottom: 12px;
+  padding-bottom: 9px;
   padding-left: 14px;
 
   font-family: "Roboto", Arial, sans-serif;
@@ -464,15 +472,12 @@ a:active {
   margin-bottom: 0;
 }
 
-.user-navigation-item:hover .modal-search {
-  display: block;
-}
-
+.user-navigation-item:hover .modal-search,
 .user-navigation-item:hover .modal-login {
   display: block;
 }
 
-.user-navigation-item:hover .cart {
+.cart-item:hover .cart {
   display: flex;
 }
 
@@ -535,11 +540,31 @@ a:active {
 .slide .button {
   font-size: 32px;
   line-height: 44px;
+
+  padding: 10px 40px;
+  border-radius: 32px;
 }
 
 .slider-switch {
   margin-top: -43px;
   margin-bottom: 63px;
+}
+
+.slider-switch label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 7px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.slider-btn:checked + label {
+  background-color: #ffffff;
 }
 
 .first-slide {
@@ -608,6 +633,11 @@ a:active {
   margin-bottom: 25px;
 }
 
+.raspberry-promo .button,
+.chocolate-promo .button {
+  padding: 11px 20px;
+}
+
 .raspberry-promo p,
 .chocolate-promo p {
   margin-bottom: 50px;
@@ -620,6 +650,22 @@ a:active {
 
 .hits .catalog-list {
   margin: 0;
+}
+
+.hits-item {
+  position: relative;
+}
+
+.hits-item::before {
+  content: "";
+  position: absolute;
+
+  width: 61px;
+  height: 61px;
+
+  background-image: url("../img/hit.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .catalog-list {
@@ -1123,7 +1169,33 @@ a:active {
 }
 
 .breadcrumb-item {
+  position: relative;
   margin-right: 20px;
+}
+
+.breadcrumb-item::before,
+.breadcrumb-item::after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  right: -12px;
+
+  width: 4px;
+  height: 6px;
+
+  background-image: url("../img/icon-right-small.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.breadcrumb-item::after {
+  right: -14px;
+}
+
+.breadcrumb-item:last-child::before,
+.breadcrumb-item:last-child::after {
+  background: none;
 }
 
 .page-title {
@@ -1241,11 +1313,25 @@ a:active {
 }
 
 .pagination-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 26px;
+  height: 26px;
   margin: 0;
-  margin-right: 10px;
+  margin-right: 3px;
+
+  border-radius: 50%;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-item a {
+  padding: 7px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1254,8 +1340,80 @@ a:active {
   color: #ffffff;
 }
 
+.pagination-item-current {
+  background-color: #ffffff;
+}
+
 .pagination-item-current a {
   color: #323232;
+}
+
+.pagination-item-forward {
+  position: relative;
+  margin-left: 12px;
+  width: 8px;
+  height: 26px;
+
+}
+
+.pagination-item-forward a::before,
+.pagination-item-forward a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left:0;
+
+  width: 8px;
+  height: 2px;
 
   background-color: #ffffff;
+}
+
+.pagination-item-forward a::before {
+  top: 8px;
+  right: 0;
+
+  transform: rotate( 45deg);
+}
+
+.pagination-item-forward a::after {
+  top: 14px;
+  right:0;
+
+  transform: rotate(-45deg);
+}
+
+.pagination-item-back {
+  position: relative;
+  margin-right: 15px;
+  width: 8px;
+  height: 26px;
+
+}
+
+.pagination-item-back a::before,
+.pagination-item-back a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left:0;
+
+  width: 8px;
+  height: 2px;
+
+  background-color:rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item-back a::before {
+  top: 8px;
+  right: 0;
+
+  transform: rotate( -45deg);
+}
+
+.pagination-item-back a::after {
+  top: 14px;
+  right:0;
+
+  transform: rotate( 45deg);
 }
