@@ -28,7 +28,7 @@
           </ul>
         </li>
         <li class="site-navigation-item"><a href="#">Доставка и оплата</a></li>
-        <li class="site-navigation-item"><a href="#">О компании</a></li>
+        <li class="site-navigation-item"><a href="#">О Компании</a></li>
       </ul>
     </nav>
 
@@ -190,6 +190,8 @@
                 Сливочное с апельсиновым джемом и цитрусовой стружкой
               </a>
             </h3>
+            <div class="catalog-item-overlay"></div>
+            <a class="button catalog-button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hits-item">
             <a href="#">
@@ -203,6 +205,8 @@
                 Сливочно-кофейное с кусочками шоколада
               </a>
             </h3>
+            <div class="catalog-item-overlay"></div>
+            <a class="button catalog-button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hits-item">
             <a href="#">
@@ -217,6 +221,8 @@
                 Сливочно-клубничное с присыпкой из белого шоколада
               </a>
             </h3>
+            <div class="catalog-item-overlay"></div>
+            <a class="button catalog-button" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item hits-item">
             <a href="#">
@@ -230,6 +236,8 @@
                 Сливочное крем-брюле с карамельной подливкой
               </a>
             </h3>
+            <div class="catalog-item-overlay"></div>
+            <a class="button catalog-button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -289,7 +297,9 @@
 
     <section class="map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCG1rNP3" width="560" height="400" frameborder="1"
+        allowfullscreen="true">
+      </iframe>
       <img src="img/map.png" width="1200" height="430" alt="Наше местоположение">
       <div class="contacts">
         <p>
@@ -307,7 +317,7 @@
           </span>
           (с 10 до 20 ежедневно)
         </p>
-        <a class="button" href="#">Форма обратной связи</a>
+        <a class="button feedback-button" href="#">Форма обратной связи</a>
       </div>
     </section>
   </main>
@@ -381,7 +391,7 @@
     <b>Мы вам обязательно ответим!</b>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="POST">
       <label class="visually-hidden" for="user-name">Ваше имя</label>
-      <input class="feedback-input" id="user-name" type="text" name="name" placeholder="Как вас зовут?">
+      <input class="feedback-input" id="user-name" type="text" name="user-name" placeholder="Как вас зовут?">
       <label class="visually-hidden" for="user-email">Электронная почта</label>
       <input class="feedback-input" id="user-email" type="email" name="email" placeholder="Ваша почта для ответа?">
       <textarea class="feedback-textarea" rows="5" name="message" placeholder="Напишите что-нибудь..."></textarea>
@@ -390,6 +400,7 @@
     </form>
   </section>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>
