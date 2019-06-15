@@ -1,5 +1,7 @@
 var feedbackButton = document.querySelector(".feedback-button");
 var popup = document.querySelector(".modal-feedback");
+var sliderButton = document.getElementsByName("slider-btn");
+var slides = document.querySelectorAll(".slide");
 
 var closeButton = popup.querySelector(".close-button");
 var form = popup.querySelector("form");
@@ -58,3 +60,24 @@ form.addEventListener("submit", function (evt) {
     }
   }
 });
+
+sliderButton[0].addEventListener("click", function () {
+  slides[0].classList.add("slide-show");
+  slides[1].classList.remove("slide-show");
+  slides[2].classList.remove("slide-show");
+});
+
+sliderButton[1].addEventListener("click", function () {
+  slides[1].classList.add("slide-show");
+  slides[0].classList.remove("slide-show");
+  slides[2].classList.remove("slide-show");
+});
+
+sliderButton[2].addEventListener("click", function () {
+  slides[2].classList.add("slide-show");
+  slides[1].classList.remove("slide-show");
+  slides[0].classList.remove("slide-show");
+});
+
+
+
